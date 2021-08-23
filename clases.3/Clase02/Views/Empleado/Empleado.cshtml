@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Empleado";
+}
+@model List<Clase02.Models.Tbl_empleado>
+<h2>Tabla de empleados activos</h2>
+
+<!--Uso de razor para iterar los datos con un foreach-->
+<table class="table table-dark table-striped">
+    <thead>
+    <th>CÓDIGO</th>
+    <th>NOMBRE</th>
+    <th>APELLIDO</th>
+    <th>EMAIL</th>
+    <th>TELÉFONO</th>
+    <th>DUI</th>
+    <th>DIRECCION</th>
+    <thead />
+
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <!-- El controlador manda al model una inyeccion con un objeto
+             de la lista de personas en repository-->
+            <tr>
+                <td>@i.Id_empleado</td>
+                <td>@i.Empl_nombre</td>
+                <td>@i.Empl_apellido</td>
+                <td>@i.Empl_email</td>
+                <td>@i.Empl_tel</td>
+                <td>@i.Empl_DUI</td>
+                <td>@i.Empl_direccion</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
