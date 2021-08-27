@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "index";
+}
+
+<h2 style="text-align:center">CÁLCULO DE NOTAS</h2>
+
+<div class="container-fluid" style="border:1px solid black;padding:1.5em; width:max-content;">
+    @using (Html.BeginForm("Save", "Notas"))
+    {
+        <label for="nombreEstudiante" style="float:initial;">Estudiante:</label><br />
+        <input type="text" name="nombreEstudiante" value="" required style="width:200%;float:initial;"/> <br /> <br />
+
+        <div style="float:left;">
+            <label for="laboratorio1">Laboratorio I:</label><br />
+            <input type="number" name="laboratorio1" value="" required maxlength="3" /> <br />
+
+            <label for="laboratorio2">Laboratorio II:</label><br />
+            <input type="number" name="laboratorio2" value="" required maxlength="3" /> <br />
+
+            <label for="laboratorio3">Laboratorio III:</label><br />
+            <input type="number" name="laboratorio3" value="" required maxlength="3" /> <br />
+        </div>
+
+        <div style="float:right;">
+            <label for="Parcial1">Parcial I:</label><br />
+            <input type="number" name="Parcial1" value="" required maxlength="3" /> <br />
+
+            <label for="Parcial1">Parcial II:</label><br />
+            <input type="number" name="Parcial2" value="" required maxlength="3" /> <br />
+
+            <label for="Parcial1">Parcial III:</label><br />
+            <input type="number" name="Parcial3" value="" required maxlength="3" /> <br /> <br />
+        </div>
+        <button type="submit" class="btn-success" style="float:initial; width:100%;">Calcular</button>
+    }
+</div>
+
