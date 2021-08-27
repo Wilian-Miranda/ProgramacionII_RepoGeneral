@@ -1,3 +1,9 @@
 1. form que captura las notas y el nombre del estudiante.
 -metodo get por el momento.
 -Se envian los datos pero no se capturan en el backend.
+
+2.Formulario para mostrar las notas desde la db
+-se ha creado el model
+-funciones de eliminar y guardar datos.
+-metodos para el calculo de todos los datos requeridos.
+-no se muestran resultados.

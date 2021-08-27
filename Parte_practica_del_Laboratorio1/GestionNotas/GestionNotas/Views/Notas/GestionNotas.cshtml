@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "GestionNotas";
+}
+@model List<GestionNotas.Models.TblNotasEstudiante>
+<h2>Tabla de empleados activos</h2>
+<div class="container-fluid" style="border:1px solid black;padding:1.5em;">
+    <!--Se activara el metodo de index en NotasCon. que nos dirige a la pagina de claculos de notas-->
+    <button class="btn-success" style="float:right;padding:0.5em;">@Html.ActionLink("CALCULAR NUEVA NOTA", "index")</button> <br /> <br /> <br />
+    <div style="border:1px solid gray; float:initial"></div>
+    <!--Uso de razor para iterar los datos con un foreach-->
+    <table class="table table-dark table-striped">
+        <thead>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Laboratorio I</th>
+        <th>Parcial I</th>
+        <th>Laboratorio II</th>
+        <th>Parcial II</th>
+        <th>Laboratorio III</th>
+        <th>Parcial III</th>
+        <th>Nota Global</th>
+        <thead />
+        <tbody>
+            @foreach (var i in Model)
+            {
+                <!-- El controlador manda al model una inyeccion con un objeto
+                 de la lista de las notas-->
+                <tr>
+                    <td>@i.id</td>
+                    <td>@i.Nombre</td>
+                    <td>@i.lab1</td>
+                    <td>@i.par1</td>
+                    <td>@i.lab2</td>
+                    <td>@i.par2</td>
+                    <td>@i.lab3</td>
+                    <td>@i.par3</td>
+                    <td>@i.nota</td>
+                    <td><button type="button" class="btn-danger">@Html.ActionLink("Eliminar", "EliminarNota", new { id = i.id })</button></td>
+                    <!--Se activara el metodo de EliminarNota en NotasCon. se manda el ID de la fila actual
+                        para especificar que fila se actualizará-->
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <br />
+</div>
