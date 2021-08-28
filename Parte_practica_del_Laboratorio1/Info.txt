@@ -7,3 +7,13 @@
 -funciones de eliminar y guardar datos.
 -metodos para el calculo de todos los datos requeridos.
 -no se muestran resultados.
+
+3.Formulario para mostrar los resultados
+-se envian los datos requeridos y se reciben en la vista con @Model y ViewBag.
+-Se implementaron ciertos procesos de verificacion de datos.
+-los datos erroneos redrigen a la misma pagina.
+-los resultados que se muestran vienen de la db: es el ultimo registro agregado.
+
+
+>>Los datos se capturan ahora con POST
+>>Comentarios generales al codigo

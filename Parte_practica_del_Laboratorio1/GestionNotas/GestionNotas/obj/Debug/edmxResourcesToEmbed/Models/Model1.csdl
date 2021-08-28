@@ -6,13 +6,13 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="lab1" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="lab2" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="lab3" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="par1" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="par2" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="par3" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="nota" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="lab1" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lab2" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lab3" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="par1" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="par2" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="par3" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="nota" Type="Decimal" Precision="5" Scale="2" />
   </EntityType>
   <EntityContainer Name="EstudianteEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TblNotasEstudiante" EntityType="Self.TblNotasEstudiante" />

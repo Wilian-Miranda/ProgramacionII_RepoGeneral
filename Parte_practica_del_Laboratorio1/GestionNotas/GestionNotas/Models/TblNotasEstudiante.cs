@@ -16,12 +16,12 @@ namespace GestionNotas.Models
     {
         public int id { get; set; }
         public string Nombre { get; set; }
-        public Nullable<decimal> lab1 { get; set; }
-        public Nullable<decimal> lab2 { get; set; }
-        public Nullable<decimal> lab3 { get; set; }
-        public Nullable<decimal> par1 { get; set; }
-        public Nullable<decimal> par2 { get; set; }
-        public Nullable<decimal> par3 { get; set; }
+        public decimal lab1 { get; set; }
+        public decimal lab2 { get; set; }
+        public decimal lab3 { get; set; }
+        public decimal par1 { get; set; }
+        public decimal par2 { get; set; }
+        public decimal par3 { get; set; }
         public Nullable<decimal> nota { get; set; }
     }
 }

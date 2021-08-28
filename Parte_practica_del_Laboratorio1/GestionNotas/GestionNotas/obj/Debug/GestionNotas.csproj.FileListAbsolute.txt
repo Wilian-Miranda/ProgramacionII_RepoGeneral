@@ -173,3 +173,4 @@ C:\Users\Jose\Desktop\ProgramacionII_RepoGeneral\Parte_practica_del_Laboratorio1
 C:\Users\Jose\Desktop\ProgramacionII_RepoGeneral\Parte_practica_del_Laboratorio1\GestionNotas\GestionNotas\bin\EntityFramework.SqlServer.dll
 C:\Users\Jose\Desktop\ProgramacionII_RepoGeneral\Parte_practica_del_Laboratorio1\GestionNotas\GestionNotas\bin\EntityFramework.xml
 C:\Users\Jose\Desktop\ProgramacionII_RepoGeneral\Parte_practica_del_Laboratorio1\GestionNotas\GestionNotas\bin\EntityFramework.SqlServer.xml
+C:\Users\Jose\Desktop\ProgramacionII_RepoGeneral\Parte_practica_del_Laboratorio1\GestionNotas\GestionNotas\obj\Debug\GestionNotas.csproj.AssemblyReference.cache

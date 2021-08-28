@@ -4,22 +4,22 @@
 }
 
 <h2 style="text-align:center">CÁLCULO DE NOTAS</h2>
+@using (Html.BeginForm("Save", "Notas", FormMethod.Post))
+{
+    <div class="container-fluid" style="border:1px solid black;padding:1.5em; width:max-content;">
 
-<div class="container-fluid" style="border:1px solid black;padding:1.5em; width:max-content;">
-    @using (Html.BeginForm("Save", "Notas", FormMethod.Post))
-    {
         <label for="nombreEstudiante" style="float:initial;">Estudiante:</label><br />
-        <input type="text" name="nombreEstudiante" value="" required style="width:200%;float:initial;"/> <br /> <br />
+        <input type="text" name="nombreEstudiante" value="" required style="width:200%;float:initial;" /> <br /> <br />
 
         <div style="float:left;">
             <label for="laboratorio1">Laboratorio I:</label><br />
             <input type="text" name="laboratorio1" value="" required /> <br />
 
             <label for="laboratorio2">Laboratorio II:</label><br />
-            <input type="text" name="laboratorio2" value="" required  /> <br />
+            <input type="text" name="laboratorio2" value="" required /> <br />
 
             <label for="laboratorio3">Laboratorio III:</label><br />
-            <input type="text" name="laboratorio3" value="" required  /> <br />
+            <input type="text" name="laboratorio3" value="" required /> <br />
         </div>
 
         <div style="float:right;">
@@ -33,6 +33,6 @@
             <input type="text" name="Parcial3" value="" required /> <br /> <br />
         </div>
         <button type="submit" class="btn-success" style="float:initial; width:100%;">Calcular</button>
-    }
-</div>
 
+    </div>
+}

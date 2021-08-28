@@ -1,9 +1,9 @@
-﻿
+﻿@model List<GestionNotas.Models.TblNotasEstudiante>
 @{
     ViewBag.Title = "GestionNotas";
 }
-@model List<GestionNotas.Models.TblNotasEstudiante>
-<h2>Tabla de empleados activos</h2>
+
+<h2>Gestionar notas</h2>
 <div class="container-fluid" style="border:1px solid black;padding:1.5em;">
     <!--Se activara el metodo de index en NotasCon. que nos dirige a la pagina de claculos de notas-->
     <button class="btn-success" style="float:right;padding:0.5em;">@Html.ActionLink("CALCULAR NUEVA NOTA", "index")</button> <br /> <br /> <br />
@@ -20,12 +20,13 @@
         <th>Laboratorio III</th>
         <th>Parcial III</th>
         <th>Nota Global</th>
+        <th>Acciones</th>
         <thead />
         <tbody>
             @foreach (var i in Model)
             {
                 <!-- El controlador manda al model una inyeccion con un objeto
-                 de la lista de las notas-->
+             de la lista de las notas-->
                 <tr>
                     <td>@i.id</td>
                     <td>@i.Nombre</td>
@@ -38,7 +39,7 @@
                     <td>@i.nota</td>
                     <td><button type="button" class="btn-danger">@Html.ActionLink("Eliminar", "EliminarNota", new { id = i.id })</button></td>
                     <!--Se activara el metodo de EliminarNota en NotasCon. se manda el ID de la fila actual
-                        para especificar que fila se actualizará-->
+                    para especificar que fila se actualizará-->
                 </tr>
             }
 

@@ -6,13 +6,13 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="100" />
-    <Property Name="lab1" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="lab2" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="lab3" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="par1" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="par2" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="par3" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="nota" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="lab1" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lab2" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lab3" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="par1" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="par2" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="par3" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="nota" Type="decimal" Precision="5" Scale="2" />
   </EntityType>
   <EntityContainer Name="EstudianteModelStoreContainer">
     <EntitySet Name="TblNotasEstudiante" EntityType="Self.TblNotasEstudiante" Schema="dbo" store:Type="Tables" />
