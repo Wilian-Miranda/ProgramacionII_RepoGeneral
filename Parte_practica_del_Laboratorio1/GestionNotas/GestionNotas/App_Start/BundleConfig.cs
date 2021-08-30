@@ -24,6 +24,7 @@ namespace GestionNotas
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/EstilosPrueba.css",
                       "~/Content/site.css"));
         }
     }

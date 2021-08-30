@@ -3,10 +3,11 @@
     ViewBag.Title = "GestionNotas";
 }
 
-<h2>Gestionar notas</h2>
-<div class="container-fluid" style="border:1px solid black;padding:1.5em;">
+
+<div class="container-fluid" style="padding: 1.5em; border: 3px solid #d4d4d4;">
+    <h2 style="float:left;">Gestionar notas</h2>
     <!--Se activara el metodo de index en NotasCon. que nos dirige a la pagina de claculos de notas-->
-    <button class="btn-success" style="float:right;padding:0.5em;">@Html.ActionLink("CALCULAR NUEVA NOTA", "index")</button> <br /> <br /> <br />
+    <button class="btn-success" style="float: right; padding: 0.5em;">@Html.ActionLink("CALCULAR NUEVA NOTA", "index")</button> <br /> <br /> <br />
     <div style="border:1px solid gray; float:initial"></div>
     <!--Uso de razor para iterar los datos con un foreach-->
     <table class="table table-dark table-striped">
@@ -26,7 +27,7 @@
             @foreach (var i in Model)
             {
                 <!-- El controlador manda al model una inyeccion con un objeto
-             de la lista de las notas-->
+                de la lista de las notas-->
                 <tr>
                     <td>@i.id</td>
                     <td>@i.Nombre</td>
