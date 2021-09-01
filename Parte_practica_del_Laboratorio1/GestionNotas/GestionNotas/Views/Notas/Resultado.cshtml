@@ -2,9 +2,12 @@
 @{
     ViewBag.Title = "Resultado";
 }
-<h2 style="text-align:center">RESULTADOS</h2>
 
-<div class="container-fluid" style="border:1px solid black;padding:1.5em; width:32em;font-size:15pt;">
+
+<div class="container-fluid" style="border:1px solid black;padding:1.5em; width:32em;font-size:12pt;">
+
+    <h2 style="text-align:center" style="float:initial;">RESULTADOS</h2>
+    <div style="border:1px solid gray; float:initial;margin-bottom:1em;"></div>
 
     <label for="nombreEstudiante" style="float:initial;">ESTUDIANTE: </label><br />
     <label>@Model.Nombre</label><br /> <br />
@@ -42,7 +45,7 @@
     </div>
 
     <label style="float:initial;width:100%;">NOTA PROMEDIO: @Model.nota</label><br /><br />
-    <button type="submit" class="btn-success" style="float:initial;width:20%">@Html.ActionLink("Regresar","GestionNotas")</button>
+    <button type="submit" class="btn-success" style="float:initial;width:20%">@Html.ActionLink("Regresar", "GestionNotas")</button>
 </div>
 
 
