@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "InicioSesion";
+}
+
+<div class="container-fluid" style="border:1px solid white;width:max-content;padding:1.5em;">
+
+    @using (Html.BeginForm("VerificarInicioSesion", "Login", FormMethod.Post))
+    {
+        <h2>Inicio de sesión</h2>
+        <h4 style="color:red">@ViewBag.info</h4> <br />
+
+        <label for="nombreUsuario">Usuario:</label> <br />
+        <input type="text" name="nombreUsuario" value="" placeholder="Ingrese su usuario" required style="width:100%" /> <br />
+
+        <label for="password">Contraseña:</label> <br />
+        <input type="password" name="password" value="" placeholder="Ingrese su contraseña" required style="width:100%" /> <br /><br />
+
+        <button class="btn-success" type="submit">Iniciar sesión</button>
+
+    }
+</div>
+
+
