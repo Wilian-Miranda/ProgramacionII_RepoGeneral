@@ -22,6 +22,8 @@ namespace Jose_Wilian_Leiva_Miranda.Controllers
             return View(cajero);
         }
         public static double monto = 0;
+
+        [HttpPost]
         public ActionResult RetirarMonto(CajeroViewModel retiro)
         {
             String url = "";
