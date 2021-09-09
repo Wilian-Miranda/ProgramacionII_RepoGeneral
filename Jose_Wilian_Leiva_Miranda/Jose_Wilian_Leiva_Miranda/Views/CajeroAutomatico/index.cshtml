@@ -1,0 +1,23 @@
+﻿@model Jose_Wilian_Leiva_Miranda.Models.ViewModels.CajeroViewModel
+@{
+    ViewBag.Title = "index";
+}
+
+@using (Html.BeginForm("RetirarMonto", "CajeroAutomatico"))
+{
+<div class="container-fluid" style="border:1px solid white;padding:1.5em;width:max-content;font-size:12pt;">
+
+    <h2 style="text-align:center;float:initial;"><strong>Cajero Automático</strong></h2>
+    <div style="border:1px solid lightgray;float:initial;margin-bottom:1em;"></div>
+
+
+    <label for="">Monto:</label><br />
+    @Html.TextBoxFor(s => s.monto, new { style = "width:100%;" })<br />
+    <label for="">Monto retirar:</label><br />  
+    @Html.TextBoxFor(m => m.montoRetiro, new { style = "width:100%;", Type="number"})<br /><br />
+    <!-- <input type="text" name="montoRetiro" value="" required style="width:100%;" /><br />-->
+
+    <button type="submit" class="btn-success" style="width:100%;"><strong>Retirar Monto</strong></button>
+</div>
+}
+
