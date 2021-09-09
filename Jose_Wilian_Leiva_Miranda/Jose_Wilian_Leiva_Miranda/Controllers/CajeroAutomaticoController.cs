@@ -25,7 +25,12 @@ namespace Jose_Wilian_Leiva_Miranda.Controllers
         public ActionResult RetirarMonto(CajeroViewModel retiro)
         {
             String url = "";
-            if (retiro.montoRetiro % 5 == 0)
+
+            if(retiro.montoRetiro == 0)
+            {
+                url = "/CajeroAutomatico/index";
+            }
+            else if (retiro.montoRetiro % 5 == 0)
             {
                 monto = retiro.montoRetiro;
                 url = "/CajeroAutomatico/Retiro";
@@ -35,8 +40,6 @@ namespace Jose_Wilian_Leiva_Miranda.Controllers
                 url = "/CajeroAutomatico/Error";
             }
             return Redirect(url);
-
-
 
         }
 
