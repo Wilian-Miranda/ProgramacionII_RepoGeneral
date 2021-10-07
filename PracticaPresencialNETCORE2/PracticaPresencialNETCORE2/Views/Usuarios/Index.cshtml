@@ -1,0 +1,29 @@
+﻿@model PracticaPresencialNETCORE2.Models.ViewModels.UsuariosViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid" style="width:max-content; padding-bottom:1em;margin-top:2em;border:1px solid gray; border-radius:14px; background-color:white;">
+    @using (Html.BeginForm("Index", "Usuarios", FormMethod.Post))
+    {
+        <h2>Registro</h2> <br />
+
+        @Html.LabelFor(n => n.nombre)<br />
+        @Html.TextBoxFor(n => n.nombre)<br />
+        @Html.ValidationMessageFor(n => n.nombre) <br />
+
+        @Html.LabelFor(e => e.edad)<br />
+        @Html.TextBoxFor(e => e.edad, new { type = "number" })<br />
+        @Html.ValidationMessageFor(e => e.edad) <br />
+
+        @Html.LabelFor(s => s.sexo)<br />
+        @Html.TextBoxFor(s => s.sexo)<br />
+        @Html.ValidationMessageFor(s => s.sexo) <br />
+
+        @Html.LabelFor(tp => tp.tipoEstudio)<br />
+        @Html.TextBoxFor(tp => tp.tipoEstudio)<br />
+        @Html.ValidationMessageFor(tp => tp.tipoEstudio) <br /><br />
+
+        <input type="submit" name="name" value="Enviar" class="btn-success" style="width:100%;" />
+    }
+</div>
