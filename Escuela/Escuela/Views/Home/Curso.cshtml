@@ -1,0 +1,46 @@
+﻿@model Escuela.Models.ViewModels.Tbl_CourseViewModel
+@{
+    ViewData["Title"] = "Curso";
+}
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://kit.fontawesome.com/fab0b1407d.js" crossorigin="anonymous"></script>
+<style type="text/css">
+    .div {
+        border: 1px solid gray;
+        border-radius: 14px;
+    }
+</style>
+
+
+
+<div class="container-fluid div" style="width:max-content; padding-bottom:1em;">
+    @using (Html.BeginForm("Curso", "Home", FormMethod.Post))
+    {
+        <h1>Curso</h1>
+
+        <div class="div" style="float:initial;"></div><br />
+
+        @Html.LabelFor(t => t.title) <br />
+                                     <i class="wow animate__animated animate__rubberBand fa fa-users" data-wow-offset="10" data-wow-iteration="10" data-wow-duration="2s"></i> @Html.TextBoxFor(t => t.title)<br />
+        @Html.ValidationMessageFor(t => t.title)<br />
+
+        @Html.LabelFor(c => c.credits) <br />
+
+        <i class="wow animate__animated animate__rubberBand fa fa-coins" data-wow-offset="10" data-wow-iteration="10" data-wow-duration="2s"></i> @Html.TextBoxFor(c => c.credits, new { type = "number" })<br />
+        @Html.ValidationMessageFor(c => c.credits)<br /><br />
+
+        <button type="submit" class="btn-success animate__animated animate__rubberBand" value="" style="width:100%">Enviar</button>
+
+    }
+
+
+
+</div>
+
+<script type="text/javascript" src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="https://kit.fontawesome.com/8c7710e876.js" crossorigin="anonymous"></script>
