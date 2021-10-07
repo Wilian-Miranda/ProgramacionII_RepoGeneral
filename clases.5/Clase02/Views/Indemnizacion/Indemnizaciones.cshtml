@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Indemnizaciones";
+}
+
+
+@using (Html.BeginForm("Importe", "Indemnizacion"))
+{
+<div class="container-fluid" style="border:1px solid white;padding:1.5em;width:max-content;font-size:12pt;">
+
+    <h2 style="text-align:center;float:initial;"><strong>Indemnizaciones</strong></h2>
+    <div style="border:1px solid lightgray;float:initial;margin-bottom:1em;"></div>
+
+    <label for="nombreEmpleado">Nombre de empleado:</label><br />
+    <input type="text" name="nombreEmpleado" value="" required style="width:100%;"/><br />
+
+    <label for="valorHora">Valor hora:</label><br />
+    <input type="text" name="valorHora" value="" required style="width:100%;"/><br />
+
+    <label for="antiguedadYear">Antiguedad en años:</label><br />
+    <input type="number" name="antiguedadYear" value="" required style="width:100%;"/><br />
+
+    <label for="horasTrabajadas">Horas trabajadas:</label><br />
+    <input type="text" name="horasTrabajadas" value="" required style="width:100%;"/><br /><br />
+
+    <button type="submit" class="btn-success" style="width:100%;"><strong>Calcular importe</strong></button>
+</div>
+}
+

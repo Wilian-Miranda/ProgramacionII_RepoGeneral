@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Importe";
+}
+
+<div class="container-fluid" style="border:1px solid white;color:white;width:max-content;font-size:12pt;">
+    <h2>Importe</h2>
+    <div style="border:1px solid lightgray;float:initial;"></div>
+
+    <label style="float:initial;">Empleado: </label> <br />
+    <label style="float: initial; background-color: dimgray; border-radius:14px;padding:0.25em;">@ViewBag.nombre</label> <br />
+
+    <div style="float:left;padding-right:1em;">
+        <label>Antiguedad:</label><br />
+        <label>Valor por hora:</label><br />
+        <label>Total a cobrar:</label><br />
+        <label>Descuento:</label><br />
+        <label>TOTAL:</label><br />
+    </div>
+
+    <div style="float:right;">
+        <label>@ViewBag.antiguedad</label><br />
+        <label>@ViewBag.valorHora</label><br />
+        <label>@ViewBag.totalCobrar</label><br />
+        <label>@ViewBag.descuento</label><br />
+        <label>@ViewBag.totalDescuento</label><br />
+    </div>
+
+</div>
+

@@ -1,0 +1,47 @@
+﻿@model Clase02.Models.ViewModels.Tbl_empleadoViewModel
+@{
+    ViewBag.Title = "GuardarEmpleado";
+}
+
+<h2 style="text-align:center">Nuevo empleado</h2>
+<br />
+<br />
+
+<!--Formulario para guardar los nuevos empleados con razor-->
+@using (Html.BeginForm("Guardar", "Empleado", FormMethod.Post))
+{
+<div class="container" style="border: 1px solid white;width:max-content; padding: 1.5em">
+    <!--asignando los valores de las variables especiales al value, que lo mostrara como el valor por defecto del input.-->
+    <label for="">Código:</label><br />
+    @Html.TextBoxFor(id => id.Id_empleado, new { name = "id" })<br /><!---->
+    <!--<input type="text" name="id" value="ViewBag.id" readonly /> <br />-->
+
+    <label for="nombresEmpleado">Nombres:</label><br />
+    @Html.TextBoxFor(name => name.Empl_nombre, htmlAttributes: new { placeholder = "Ingrese sus nombres" })<br />
+    <!--<input type="text" name="nombresEmpleado" value="ViewBag.nombres" placeholder="Ingrese sus nombres" required /><br />-->
+
+    <label for="apellidosEmpleado">Apellidos:</label><br />
+    @Html.TextBoxFor(apellido => apellido.Empl_apellido, htmlAttributes: new { placeholder = "Ingrese sus apellidos" })<br />
+    <!--<input type="text" name="apellidosEmpleado" value="ViewBag.apellidos" required placeholder="Ingrese sus apellidos" /> <br />-->
+
+    <label for="emailEmpleado">Email:</label><br />
+    @Html.TextBoxFor(email => email.Empl_email, htmlAttributes: new { placeholder = "correo@ejemplo.com", type = "email" })<br />
+    <!--<input type="email" name="emailEmpleado" value="ViewBag.email" required placeholder="correo@ejemplo.com" /><br />-->
+
+    <label for="telefonoEmpleado">Teléfono:</label><br />
+    @Html.TextBoxFor(tel => tel.Empl_tel, htmlAttributes: new { placeholder = "0000-0000", type = "tel" })<br />
+    <!--<input type="tel" name="telefonoEmpleado" value="ViewBag.telefono" required placeholder="0000-0000" /> <br />-->
+
+    <label for="duiEmpleado">DUI:</label><br />
+    @Html.TextBoxFor(dui => dui.Empl_DUI, htmlAttributes: new { placeholder = "00000000-0" })<br />
+    <!--<input type="text" name="duiEmpleado" value="ViewBag.dui" required placeholder="00000000-0" /><br />-->
+
+    <label for="direccionEmpleado">Dirección:</label><br />
+    @Html.TextBoxFor(dir => dir.Empl_direccion, htmlAttributes: new { placeholder = "Dirección de residencia" })<br /><br />
+    <!--<input type="text" name="direccionEmpleado" value="ViewBag.direccion" placeholder="Dirección de residencia" /> <br /><br />-->
+
+    <button class="btn-success" type="submit">Guardar</button>
+    <!--el valor de la variable id determina si se guarda o se actualizar datos-->
+</div>
+}
+

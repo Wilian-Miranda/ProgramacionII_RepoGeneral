@@ -1,0 +1,35 @@
+﻿@model List<Clase02.Models.ClsPersona>
+@{
+    ViewBag.Title = "Descripcion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Descripcion", "Persona"))
+{
+                <label>Agrege su nombre:</label><br />
+                <input type="text" name="Nombre_V" value="" /><br />
+                <input type="submit"/>
+            }
+<h1>@ViewBag.VariableVista</h1>
+
+<!--Uso de razor para iterar los datos con un foreach-->
+<table class="table table-dark table-striped">
+    <thead>
+        <th>CÓDIGO</th>
+        <th>NOMBRE</th>
+    <thead/>
+
+        <tbody>
+            @foreach (var i in Model)
+            {
+                <!-- El controlador manda al model una inyeccion con un objeto
+                 de la lista de personas en repository-->
+                <tr>
+                    <td>@i.Id.</td>
+                    <td>@i.Nombre</td>
+                </tr>
+            }
+
+        </tbody>
+</table>
+

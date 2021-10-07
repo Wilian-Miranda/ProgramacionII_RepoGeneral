@@ -1,0 +1,41 @@
+﻿
+    @model Clase02.Models.ViewModels.PersonaViewModels
+    @{
+        ViewBag.Title = "PersonaViewModel";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    @using (Html.BeginForm("DescripcionViewModel", "Persona", FormMethod.Post))
+    {
+        @Html.LabelFor(m=>m.Empl_nombre) <br />
+        @Html.TextBoxFor(t=>t.Empl_nombre)
+        @Html.ValidationMessageFor(ms=>ms.Empl_nombre, null, new {@class="red"}) <br />
+
+        <input type="submit" />
+    }
+    <h1>@Model.Empl_nombre</h1>
+
+    <!--Uso de razor para iterar los datos con un foreach-->
+    <!--<table class="table table-dark table-striped">
+        <thead>
+        <th>CÓDIGO</th>
+        <th>NOMBRE</th>
+        <thead />
+
+        <tbody>
+            foreach (var i in Model)
+            {-->
+                <!-- El controlador manda al model una inyeccion con un objeto
+             de la lista de personas en repository-->
+                <!--<tr>
+                    <td>i.Id.</td>
+                    <td>i.Nombre</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+}-->
+
