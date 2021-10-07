@@ -1,0 +1,18 @@
+﻿@model PracticaPresencialNETCORE.Models.ViewModels.CajeroViewModel
+@{
+    ViewBag.Title = "index";
+}
+
+
+<div class="container-fluid" style="width:max-content; border:1px solid gray;margin-top:2em;padding-bottom:1em;border-radius:14px;background-color:aliceblue;">
+    @using (Html.BeginForm("index", "Cajero", FormMethod.Post))
+    {
+        <h2>Cajero</h2> <br />
+        @Html.LabelFor(m => m.monto) <br />
+        @Html.TextBoxFor(t => t.monto)<br />
+        @Html.ValidationMessageFor(e => e.monto)
+        <br /><br />
+
+        <input type="submit" name="" value="Enviar" class="btn-success" />
+    }
+</div>
