@@ -1,0 +1,42 @@
+﻿.bg-white {
+    background-color:#ffcb2d !important;
+}
+
+.menu-img-logo{
+    padding-right:0.5em;
+    background-color:transparent;
+}
+
+body {
+    background-color: #e2e2e2;
+}
+
+.nav-item:hover {
+    background-color: #eeff60;
+    border-radius: 14px;
+    box-shadow: #e2e2e2 5px 5px;
+}
+.dropdown-menu {
+    background-color: #eeff60;
+}
+.menu-botones {
+    padding: 1em;
+    background-color: transparent;
+    border: none;
+}
+.menu-botones:focus {
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+.dropdown-item:hover{
+    text-align:center;
+}
+.btn-login {
+    margin-right: 1em;
+    background-color: #eeff60;
+}
+.btn-buscar {
+    margin-right: 1em;
+    border-color: #eeff60;
+}
+
+

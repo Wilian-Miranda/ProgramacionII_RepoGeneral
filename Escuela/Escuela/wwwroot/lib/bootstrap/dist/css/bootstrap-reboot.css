@@ -164,10 +164,9 @@ pre {
 figure {
   margin: 0 0 1rem;
 }
-
 img {
-  vertical-align: middle;
-  border-style: none;
+    vertical-align: middle;
+    border-style: none;
 }
 
 svg {

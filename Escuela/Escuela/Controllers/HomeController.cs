@@ -30,7 +30,9 @@ namespace Escuela.Controllers
             //course.title = "Poo";
             //course.credits = 100;
             //icourse.Insertar(course);
-            return View();
+            //return View();
+            var dandoFormatoJson = icourse.ListarCursos();
+            return Json(new { datos = dandoFormatoJson });
         }
 
         public IActionResult Curso()
@@ -56,6 +58,16 @@ namespace Escuela.Controllers
                 return View("Curso", course);
             }
         }
+
+        //incluir colleccion de datos
+
+        public IActionResult GetAll()
+        {
+            var dandoFormatoJson = icourse.ListarCursos();
+
+            return Json(new { datos = dandoFormatoJson });
+        }
+
 
             public IActionResult Privacy()
         {
